@@ -15,7 +15,7 @@ kube-prometheus-stack:
       additionalScrapeConfigs:
         - job_name: 'kafka-server'
           static_configs:
-          - targets: ['18.231.193.227:7071']
+          - targets: ['18.228.222.70:7071']
 
   grafana:
     enabled: true
