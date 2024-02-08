@@ -2,10 +2,10 @@
 Aplicação simples de um Producer e Consumer em Python para o Kafka (broker)
 
 ## Requisitos:
-	- Servidor Kafka configurado com um Broker e Zookeeper;
-	- Minikube para deploy das aplicações e stack de métricas;
-    - Kubectl
-    - Helm
+* Servidor Kafka configurado com um Broker e Zookeeper;
+* Minikube para deploy das aplicações e stack de métricas;
+* kubectl
+* helm
 
 ## Deploy de Stack de Métricas no Minikube
 1) Inicialize o Minikube:
