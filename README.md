@@ -1,13 +1,13 @@
 # kafka-integration
-Aplicação simples de um Producer e Consumer em Python para o Kafka (broker)
+Aplicação simples de um Producer e Consumer em Python para o Kafka.
 
 ## Requisitos:
-* Servidor Kafka configurado com um Broker e Zookeeper;
-* Minikube para deploy das aplicações e stack de métricas;
-* kubectl
-* helm
+    * Servidor Kafka configurado com um Broker e Zookeeper;
+    * Minikube para deploy das aplicações e stack de métricas;
+    * kubectl
+    * helm
 
-## Deploy de Stack de Métricas no Minikube
+## Deploy de Stack de Métricas:
 1) Inicialize o Minikube:
 ```bash
 $ minikube start
@@ -20,7 +20,7 @@ $ kubectl create ns monitoring
 ```bash
 $ helm repo add prometheus-community * https://prometheus-community.github.io/helm-charts
 ```
-4) Altere os parametros que julgar necessário no values.yaml, crie um template a partir do helm chart e aplique:
+4) Dentro do diretório monitoring, altere os parametros que julgar necessário no values.yaml, crie um template a partir do helm chart e aplique:
 ```bash
 $ helm template kube-prometheus-stack -f values.yaml . > monitoring-stack.yaml
 $ kubectl apply -f monitoring-stack.yaml -n monitoring
@@ -30,7 +30,7 @@ $ kubectl apply -f monitoring-stack.yaml -n monitoring
 $ kubectl get pods -n monitoring
 ```
 
-## Deploy do Producer e Consumer no Minikube
+## Deploy do Producer e Consumer:
 1) Com o Minikube já inicializado, crie um namespace chamado kafka-integration:
 ```bash
 $ kubectl create ns kafka-integration
